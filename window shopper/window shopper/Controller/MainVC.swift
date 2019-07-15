@@ -14,7 +14,7 @@ class MainVC: UIViewController {
     
     @IBOutlet weak var itemTextField: CurrencyTextField!
     
-    
+    let wage = Wage()
     override func viewDidLoad() {
         super.viewDidLoad()
         let btn = UIButton(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 35))
@@ -27,7 +27,7 @@ class MainVC: UIViewController {
     }
     
     @objc func calculate() {
-        print("Calculate button is pressed sucessfully!")
+        print(wage.getHours(for: 250.42, item: 15.33))
     }
 
 }
