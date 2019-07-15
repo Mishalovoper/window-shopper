@@ -45,24 +45,55 @@
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVK-cB-4ko">
+                                <rect key="frame" x="172" y="366" width="31" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCJ-ez-MG1">
+                                <rect key="frame" x="164.5" y="434" width="46" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tcM-U9-eYw">
+                                <rect key="frame" x="50" y="613" width="275" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="0.2521136558219178" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Clear Calculator">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ADg-eK-TcU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="tCJ-ez-MG1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0Pl-ix-bEB"/>
                             <constraint firstItem="DYQ-8q-1ft" firstAttribute="top" secondItem="O3c-JC-m8b" secondAttribute="bottom" constant="60" id="4US-Mm-gd1"/>
                             <constraint firstItem="smk-Ds-3tA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6Lw-Dj-Y3A"/>
+                            <constraint firstItem="XVK-cB-4ko" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dq8-AK-wD4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DYQ-8q-1ft" secondAttribute="trailing" constant="50" id="EBy-1K-Uyf"/>
                             <constraint firstAttribute="bottom" secondItem="smk-Ds-3tA" secondAttribute="bottom" id="NbW-iK-iP3"/>
                             <constraint firstItem="O3c-JC-m8b" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="65" id="Rzp-Vk-nYM"/>
                             <constraint firstItem="DYQ-8q-1ft" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="U8E-Pd-OGA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tcM-U9-eYw" secondAttribute="trailing" constant="50" id="a70-vh-qcq"/>
                             <constraint firstItem="smk-Ds-3tA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="e4R-2K-uQo"/>
+                            <constraint firstItem="tcM-U9-eYw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="hiJ-eb-9lc"/>
                             <constraint firstItem="O3c-JC-m8b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kMU-78-vau"/>
+                            <constraint firstItem="XVK-cB-4ko" firstAttribute="top" secondItem="DYQ-8q-1ft" secondAttribute="bottom" constant="35" id="mXX-OL-SMi"/>
+                            <constraint firstItem="tCJ-ez-MG1" firstAttribute="top" secondItem="XVK-cB-4ko" secondAttribute="bottom" constant="8" id="rPf-XD-Pht"/>
                             <constraint firstAttribute="trailing" secondItem="smk-Ds-3tA" secondAttribute="trailing" id="ujk-wH-oHn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tcM-U9-eYw" secondAttribute="bottom" constant="20" id="xc6-Tf-zsp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="hourlyTextField" destination="yW4-SO-9Mb" id="Rrp-Vx-ujP"/>
                         <outlet property="itemTextField" destination="SjW-sS-BUh" id="E00-Hy-JKX"/>
+                        <outlet property="resultLbl" destination="XVK-cB-4ko" id="YGf-yL-bcd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

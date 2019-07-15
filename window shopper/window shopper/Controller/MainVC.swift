@@ -9,11 +9,12 @@
 import UIKit
 
 class MainVC: UIViewController {
-
+    var dollarCounter = 0
     @IBOutlet weak var hourlyTextField: CurrencyTextField!
     
     @IBOutlet weak var itemTextField: CurrencyTextField!
     
+    @IBOutlet weak var resultLbl: UILabel!
     let wage = Wage()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +28,24 @@ class MainVC: UIViewController {
     }
     
     @objc func calculate() {
-        print(wage.getHours(for: 250.42, item: 15.33))
+        if let hours = hourlyTextField, let item = itemTextField {
+            view.endEditing(true)
+            let hourly = Double(hourlyTextField.text!)
+            let item = Double(itemTextField.text!)
+            let result = wage.getHours(for: hourly!, item: item!)
+            
+            resultLbl.text = String(result)
+        }
     }
-
+    @IBAction func clearPressed(_ sender: Any) {
+        hourlyTextField.text = ""
+        itemTextField.text = ""
+        resultLbl.text = "0"
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
 }
 
